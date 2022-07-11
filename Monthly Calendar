@@ -117,7 +117,7 @@ void calendar(int total, int y, int m, int lastDay)
 	}
 	printf("\n");
 }
-int main()
+void main()
 {
 	int y, m, d, total;
 	const char* k;
