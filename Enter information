@@ -1,0 +1,53 @@
+#include <iostream>
+#include <cstdio>
+#include <string>
+using namespace std;
+int main()
+{
+	char name[80];
+	string str;
+
+	bool trouble;
+	std::cout << "Input your name : ";
+	gets_s(name);
+	_strupr_s(name);
+	puts(name);
+	do {
+		trouble = false;
+		std::cout << "Input your phone number : ";
+		cin >> str;
+		int position = 0;
+	
+//referred to part of Waves' code.
+	if (str[0] == '0') {
+		switch (str[1])
+		{
+		case '1':
+			str.insert(3, 1, '-');
+			position = 4;
+			break;
+		case '2':
+			str.insert(2, 1, ')');
+			position = 3;
+			break;
+		default:
+			str.insert(3, 1, ')');
+			position = 4;
+			break;
+		}
+	}
+	int remain = str.length() - position;
+	if (remain != 7 && remain != 8) {
+		printf("Please reenter your phone number\n");
+		trouble = true;
+		continue;
+	}
+	str.insert(str.length() - 4, 1, '-');
+	std::cout << " "<< str;
+	printf("\n\n");
+}while (trouble);
+
+std::cout << "Name : " << name << std::endl;
+std::cout << "Phone Number : " << str;
+	return 0;
+}
