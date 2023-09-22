@@ -133,7 +133,7 @@ void calendar(int total, int y, int m, int lastDay)
 {
 	int a, b, c = dayStart(total);
 
-	printf("< Year: %d Month: %d >\n", y, m);
+	printf("< Year: %d / Month: %d >\n", y, m);
 	printf("SUN MON TUE WED THU FRI SAT\n");
 	for (a = 1; a <= 6; a++) {
 		for (b = 1; b <= 7; b++) {
