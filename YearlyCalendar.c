@@ -107,7 +107,7 @@ void calendar(int total, int m, int l)
 {
 	int a, b, c = dayStart(total);
 
-	printf("<%d월>\n", m);
+	printf("<Month: %d>\n", m);
 	printf("SUN MON TUE WED THU FRI SAT\n");
 	for (a = 1; a <= 6; a++) {
 		for (b = 1; b <= 7; b++) {
