@@ -97,20 +97,20 @@ const char* day(int total)
 	const char* k=NULL;
 
 	switch (total % 7) {
-	case 0: k = "일"; break;
-	case 1: k = "월"; break;
-	case 2: k = "화"; break;
-	case 3: k = "수"; break;
-	case 4: k = "목"; break;
-	case 5: k = "금"; break;
-	case 6: k = "토"; break;
+	case 0: k = "Sun"; break;
+	case 1: k = "Mon"; break;
+	case 2: k = "Tues"; break;
+	case 3: k = "Wednes"; break;
+	case 4: k = "Thurs"; break;
+	case 5: k = "Fri"; break;
+	case 6: k = "Satur"; break;
 	}
 	return k;
 }
 
 void output(const char* k)
 {
-	printf("(%s)요일\n", k);
+	printf("(%s)day\n", k);
 }
 
 int dayStart(int total)
@@ -133,7 +133,7 @@ void calendar(int total, int y, int m, int lastDay)
 {
 	int a, b, c = dayStart(total);
 
-	printf("< %d년 %d월 >\n", y, m);
+	printf("< Year: %d Month: %d >\n", y, m);
 	printf("SUN MON TUE WED THU FRI SAT\n");
 	for (a = 1; a <= 6; a++) {
 		for (b = 1; b <= 7; b++) {
