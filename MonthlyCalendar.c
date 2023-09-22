@@ -110,7 +110,7 @@ const char* day(int total)
 
 void output(const char* k)
 {
-	printf("(%s)day\n", k);
+	printf("%sday\n", k);
 }
 
 int dayStart(int total)
